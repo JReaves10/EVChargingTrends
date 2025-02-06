@@ -7,7 +7,8 @@
 - Both public and private ports have increased since 2014
 
 ## How to Run
-1. Run to view the changes of public and private ports over time
+1. Load the 3 .csv files into the environment along with the python script
+2. Run to view the changes of public and private ports over time
 
 ## Technologies Used
 - Python
