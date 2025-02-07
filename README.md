@@ -1,16 +1,70 @@
-# Electric Vehicle Charging Trends
+# EV Charging Ports and Sales Trend Analysis
 
-## Analyzing the trends between private and public electric vehicle charging ports
+## Project Overview
+This repository provides an analysis of trends in the number of electric vehicle (EV) charging ports and vehicle sales from 2015 to 2018, using data from the US Government's Alternative Fuels Data Center and other sources. The analysis explores the relationship between electric vehicle sales and the growth of both public and private charging ports.
 
-## Key Insights:
-- Public ports have drastically grown over the years
-- Both public and private ports have increased since 2014
+## Objective
+1. The goal of this project is to answer the question: Does increased electric vehicle sales lead to **more** public or private charging ports?
+2. We will also explore trends between the number of charging ports (both public and private) and EV sales between **2015** and **2018**.
 
-## How to Run
-1. Load the 3 .csv files into the environment along with the python script
-2. Run to view the changes of public and private ports over time
+## Files
+- **private_ev_charging.csv** - Contains data on **private** EV charging ports and station locations by year.
+- **public_ev_charging.csv** - Contains data on **public** EV charging ports and station locations by year.
+- **ev_sales.csv** - Contains sales data of electric vehicles by year.
 
-## Technologies Used
-- Python
-- matplotlib
-- seaborn
+## Installation
+To run this analysis, you'll need the following libraries installed:
+
+bash
+Copy
+Edit
+pip install pandas matplotlib seaborn
+Data Processing and Analysis
+Code Explanation
+Importing Data: We load the datasets containing EV sales and charging ports information.
+
+python
+Copy
+Edit
+private_df = pd.read_csv('private_ev_charging.csv')
+public_df = pd.read_csv('public_ev_charging.csv')
+sales_df = pd.read_csv('ev_sales.csv')
+Merging Data: The three datasets are merged using the year variable to align the data. We ensure only complete rows are kept for analysis.
+
+python
+Copy
+Edit
+merged_df = private_df.merge(public_df, how='outer', indicator=True)
+merged_df = merged_df[merged_df['_merge'] == 'both']
+merged_df.drop(columns=['_merge'], inplace=True)
+merged_df = merged_df.merge(sales_df, how='left', on='year')
+Total EV Sales in 2018: The number of electric vehicles sold in 2018 is stored in the variable ev_sales_2018.
+
+python
+Copy
+Edit
+ev_sales_2018 = 361315
+Trends Visualization: The trends of private ports, public ports, and total sales are plotted on a line graph to visualize their changes over time.
+
+python
+Copy
+Edit
+fig, ax = plt.subplots()
+sns.lineplot(data=merged_df, x='year', y='private_ports', label='Private Ports')
+sns.lineplot(data=merged_df, x='year', y='public_ports', label='Public Ports')
+sns.lineplot(data=merged_df, x='year', y='sales', label='Total Sales', linestyle='--')
+
+ax.set_title('EV Ports and Sales Over Time')
+ax.set(xlabel='Year', ylabel='Count')
+plt.show()
+Trend Comparison: A comparison of trends between EV sales and charging ports from 2015 to 2018 reveals whether vehicle sales and port installations (both public and private) followed the same trend. The result is stored in the variable trend.
+
+python
+Copy
+Edit
+trend = 'same'
+Results
+The number of electric vehicle sales in 2018 is 361,315. After comparing the trends, we observe that the trends for EV sales and the number of charging ports (both public and private) between 2015 and 2018 are the same.
+
+Conclusion
+The analysis suggests that the growth in electric vehicle sales is closely linked to the expansion of both public and private charging infrastructure.
