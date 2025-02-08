@@ -34,10 +34,15 @@ The number of electric vehicles sold in 2018 is stored in the variable ev_sales_
 
 ![](third.png)
 
+### Integration
+Total sales is merged with the filtered charging port information and rows with missing sales data are removed
+
+![](fourth.png)
+
 ### 4. Trends Visualization
 The trends of private ports, public ports, and total sales are plotted on a line graph to visualize their changes over time.
 
-![](fourth.png)
+![](fifth.png)
 
 ### 5. Trend Comparison
 A comparison of trends between EV sales and charging ports from 2015 to 2018 reveals whether vehicle sales and port installations (both public and private) followed the same trend. The result is stored in the variable trend.
@@ -47,7 +52,7 @@ A comparison of trends between EV sales and charging ports from 2015 to 2018 rev
 ## Results
 The number of electric vehicle sales in 2018 is 361,315. After comparing the trends, we observe that the trends for EV sales and the number of charging ports (both public and private) between 2015 and 2018 are the same.
 
-![](fifth.png)
+![](sixth.png)
 
 ## Conclusion
 The analysis suggests that the growth in electric vehicle sales is closely linked to the expansion of both public and private charging infrastructure.
