@@ -52,6 +52,7 @@ A comparison of trends between EV sales and charging ports from 2015 to 2018 rev
 ## Results
 The number of electric vehicle sales in 2018 is 361,315. After comparing the trends, we observe that the trends for EV sales and the number of charging ports (both public and private) between 2015 and 2018 are the same.
 
+#### Output
 ![](sixth.png)
 
 ## Conclusion
