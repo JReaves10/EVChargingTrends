@@ -24,22 +24,22 @@ Load the datasets using pandas.read_csv() containing EV sales and charging ports
 
 ![](first.png)
 
-### Merging Data
+### 2. Merging Data
 The three datasets are merged using the year variable to align the data. We ensure only complete rows are kept for analysis.
 
 ![](second.png)
 
-## Total EV Sales in 2018
+### 3. Total EV Sales in 2018
 The number of electric vehicles sold in 2018 is stored in the variable ev_sales_2018.
 
 ![](third.png)
 
-## Trends Visualization
+### 4. Trends Visualization
 The trends of private ports, public ports, and total sales are plotted on a line graph to visualize their changes over time.
 
 ![](fourth.png)
 
-## Trend Comparison
+### 5. Trend Comparison
 A comparison of trends between EV sales and charging ports from 2015 to 2018 reveals whether vehicle sales and port installations (both public and private) followed the same trend. The result is stored in the variable trend.
 
 ![](trend.png)
