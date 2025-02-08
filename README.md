@@ -56,3 +56,6 @@ The number of electric vehicle sales in 2018 is 361,315. After comparing the tre
 
 ## Conclusion
 The analysis suggests that the growth in electric vehicle sales is closely linked to the expansion of both public and private charging infrastructure.
+
+### Technology Used
+- Python
