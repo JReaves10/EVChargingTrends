@@ -1,5 +1,4 @@
 # EV Charging Ports and Sales Trend Analysis
-
 This repository provides an analysis of trends in the number of electric vehicle (EV) charging ports and vehicle sales from 2015 to 2018, using data from the US Government's Alternative Fuels Data Center and other sources. The analysis explores the relationship between electric vehicle sales and the growth of both public and private charging ports.
 
 ## Objectives
